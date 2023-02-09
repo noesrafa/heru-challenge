@@ -1,0 +1,101 @@
+.gifs-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gifs-container .cards-container {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.gifs-container .searchbar {
+    background-color: var(--white);
+    width: fit-content;
+    padding: 12px 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.gifs-container .searchbar .divider {
+    width: 2px;
+    height: 20px;
+    background-color: var(--gray);
+    opacity: .2;
+}
+
+.gifs-container .searchbar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 14px;
+}
+
+/* ====== CARD ===== */
+.gifs-container .card-item {
+    cursor: pointer;
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 250px;
+    height: 100%;
+    transition: 200ms;
+}
+
+.gifs-container .card-item:hover {
+    transform: translateY(-4px);
+}
+
+
+.gifs-container .card-item .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gifs-container .card-item .card-title {
+    font-weight: bold;
+}
+
+.gifs-container .card-item .card-url {
+    font-size: 12px;
+    color: var(--gray);
+    width: 100%;
+}
+
+.gifs-container .card-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+ .end {
+    text-align: center;
+    margin: 64px 0;
+    color: var(--gray);
+}
+
+/* ======== RESPONSIVE ======== */
+@media only screen and (max-width: 1024px) {
+    .gifs-container .cards-container {
+        margin-top: 22px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .gifs-container .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
